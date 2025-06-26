@@ -64,7 +64,7 @@ uvicorn main:app --reload --port 8000
 
 Open [http://localhost:8000/rankings](http://localhost:8000/rankings)
 
-> ⚠**Tip**: This data only updates once per minute — no need to poll every second.
+> ⚠**note**: This data only updates once per minute
 
 ---
 
