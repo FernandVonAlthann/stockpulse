@@ -1,0 +1,23 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+import random
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+SAMPLE_TICKERS = ["AAPL", "GOOG", "TSLA", "MSFT", "NVDA", "AMZN", "NFLX", "META", "INTC", "AMD"]
+
+@app.get("/rankings")
+def get_stock_rankings():
+    stocks = [{"ticker": t, "change": round(random.uniform(-5, 5), 2)} for t in SAMPLE_TICKERS]
+    stocks.sort(key=lambda x: x["change"], reverse=True)
+    return {
+        "top": stocks[:5],
+        "bottom": stocks[-5:]
+    }
