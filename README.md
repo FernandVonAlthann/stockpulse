@@ -11,8 +11,7 @@ A real-time dashboard showing the **top 5 gainers** and **top 5 losers**, update
 
 ## Live Demo
 
-- Frontend: [http://localhost:3000](http://localhost:3000)
-- Backend: [http://localhost:8000/rankings](http://localhost:8000/rankings)
+<img width="1717" alt="Screenshot 2025-06-25 at 11 30 12 PM" src="https://github.com/user-attachments/assets/065def14-808f-4c76-9af2-8388a4ca8d35" />
 
 ---
 
